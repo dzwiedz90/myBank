@@ -36,4 +36,7 @@ def generator():
 			break
 		elif inputChoose == '4':
 			sys.exit(0)
+		else: 
+			print('Wprowadzono niepoprawny znak!')
+			input('Wciśnij enter, aby kontynuować...')
 		os.system('cls')

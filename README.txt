@@ -9,7 +9,6 @@ aplikacji klienckiej, wykonuje operacje zlecone przez klienta.
 - modu³ klienta - operacje na koncie, sprawdzenie stanu, wyci¹g operacji do pliku, przesy³anie operacij/zadañ do serwera
 - modu³ serwer - wykonywanie operacji/zadañ przesy³anych z modu³u klienta, przechowywanie/modyfikacja danych w bazie
 - baza, tabele:
-    *u¿ytkownicy: id, imie, nazwisko, miasto, kod pocztowy, ulica+nrdomu, pesel
-    *konta: id_user (obcy z u¿ytkownicy - id), nr_konta, typ_konta, has³o
-    *stan konta: id_user(obcy z u¿ytkownicy - id), nr_konta, stan_konta
+    *u¿ytkownicy: id, imie, nazwisko, has³o, miasto, kod pocztowy, ulica+nrdomu, pesel
+    *konta: id_user (obcy z u¿ytkownicy - id), nr_konta, typ_konta, stan_konta
  - generator - modu³ dodatkowy do generowania numeru pesel i numeru konta

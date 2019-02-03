@@ -5,6 +5,7 @@ import time
 import generatorModule
 import databaseActions
 import usersModule
+import myBankModule
 
 
 
@@ -31,15 +32,19 @@ def myBank():
 		print('5. Wyjdź')
 		inputChoose = input('Wybierz działanie: ')
 		if inputChoose == '1':
-			generator.generator()
+			generatorModule.generator()
 		elif inputChoose == '2':
 			usersModule.usersModule()
 		elif inputChoose == '3':
 			print('bankomat/wpłatomat')
+			input()
 		elif inputChoose == '4':
-			print('myBank')
+			myBankModule.myBankModule()
 		elif inputChoose == '5':	
 			sys.exit(0)
+		else: 
+			print('Wprowadzono niepoprawny znak!')
+			input('Wciśnij enter, aby kontynuować...')
 		os.system('cls')
 
 myBank()

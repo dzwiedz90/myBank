@@ -27,6 +27,7 @@ def usersModule():
 			databaseActions.readData()
 			input('Wciśnij enter, aby kontynuować...')
 		elif inputChoose == '2':
+			input('Pamietaj o wprowadzeniu poprawnych danych do bazy!\nWciśnij enter, aby kontynuować...\n')
 			name= input('Podaj imię: ')
 			surname = input('Podaj nazwisko: ')
 			password = input('Podaj hasło: ')
@@ -43,4 +44,7 @@ def usersModule():
 			break
 		elif inputChoose == '4':
 			sys.exit(0)
+		else: 
+			print('Wprowadzono niepoprawny znak!')
+			input('Wciśnij enter, aby kontynuować...')
 		os.system('cls')

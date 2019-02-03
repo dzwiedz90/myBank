@@ -54,7 +54,8 @@ def createDatabase():
 	accountsData = (
 		(None, '162472', '36589,99', '1'),
 		(None, '244685', '12260,87', '2'),
-		(None, '805054', '87329,63', '3')
+		(None, '805054', '87329,63', '3'),
+		(None, '545152', '5345,09', '1')
 	)
 
 	#wstawiam rekordy do tabeli
