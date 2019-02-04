@@ -40,13 +40,55 @@ def logIn(login, password):
 	conn = sqlite3.connect('example.db')
 	cur = conn.cursor()
 	cur.execute("SELECT users.id, name, surname, password, account_number, account_balance FROM users, accounts WHERE accounts.users_id=users.id AND users.id = '%s'" % login)
-		
+	
 	data = cur.fetchall()
-	for x in data:
-		print('\n')
-		print('id: ', x[0],)
-		print('name: ', x[1],)
-		print('surname: ', x[2],)
-		print('account_number: ', x[4],)
-		print('account_balance: ', x[5],)
+	length = len(data)
+	try:
+		data1 = data[0]
+		data2 = data[1]
+		print(data1)
+		print(data2)
+		
+		for x in data1:
+			idData = data1[0]
+			nameData = data1[1]
+			surnameData = data1[2]
+			passwordData = data1[3]
+			accNumberData = data1[4]
+			accBalanceData = data1[5]
+		for x in data2:
+			idData2 = data2[0]
+			nameData2 = data2[1]
+			surnameData2 = data2[2]
+			passwordData2 = data2[3]
+			accNumberData2 = data2[4]
+			accBalanceData2 = data2[5]
+		print(idData)
+		print(nameData)
+		print(surnameData)
+		print(passwordData)
+		print(accNumberData)
+		print(accBalanceData)
+		print(idData2)
+		print(nameData2)
+		print(surnameData2)
+		print(passwordData2)
+		print(accNumberData2)
+		print(accBalanceData2)
+	except IndexError:
+		for x in data:
+			idData = data[0]
+			nameData = data[1]
+			surnameData = data[2]
+			passwordData = data[3]
+			accNumberData = data[4]
+			accBalanceData = data[5]
+	
+		print(idData)
+		print(nameData)
+		print(surnameData)
+		print(passwordData)
+		print(accNumberData)
+		print(accBalanceData)
+		
 	input()
