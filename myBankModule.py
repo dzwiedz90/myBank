@@ -247,6 +247,7 @@ def transferMoney():
 			try:
 				accBalanceIN = [accBalanceData]
 				acc = accBalanceIN[0]
+				acc.replace(',', ".")
 				accB = int(acc)
 				print(type(acc))
 				print('True')

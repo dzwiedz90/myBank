@@ -32,7 +32,7 @@ def createDatabase():
 		CREATE TABLE IF NOT EXISTS accounts (
 			id INTEGER PRIMARY KEY ASC,
 			account_number INTEGER NOT NULL,
-			account_balance DOUBLE NOT NULL,
+			account_balance varchar(250) NOT NULL,
 			users_id INTEGER NOT NULL,
 			FOREIGN KEY(users_id) REFERENCES users(id)
 		)""")
@@ -52,10 +52,10 @@ def createDatabase():
 
 	# tupla "accountsData" zawiera tuple z danymi poszczególnych kont
 	accountsData = (
-		(None, '162472', '36589,99', '1'),
-		(None, '244685', '12260,87', '2'),
-		(None, '805054', '87329,63', '3'),
-		(None, '545152', '5345,09', '1')
+		(None, '162472', '36589.99', '1'),
+		(None, '244685', '12260.87', '2'),
+		(None, '805054', '87329.63', '3'),
+		(None, '545152', '5345.09', '1')
 	)
 
 	#wstawiam rekordy do tabeli
